@@ -1,0 +1,11 @@
+#!/bin/bash
+hdfs dfs -mkdir /user/training/weather/
+hdfs dfs -put ~/futurense_hadoop-pyspark/labs/dataset/weather/weather_data.txt hdfs://localhost:9000/user/training/weather/
+split --bytes=21K ~/futurense_hadoop-pyspark/labs/dataset/weather/weather_data.txt weather1.txt
+mv weather1.txtaa weather1.txt
+mv weather1.txtab weather2.txt
+hdfs dfs -put ~/weather1.txt hdfs://localhost:9000/user/training/weather/
+hdfs dfs -put ~/weather2.txt hdfs://localhost:9000/user/training/weather/
+hdfs dfs -getmerge  /user/training/weather/weather1.txt /user/training/weather/weather2.txt weather3.txt
+hdfs dfs -put ~/weather3.txt hdfs://localhost:9000/user/training/weather/
+hdfs dfs -cat /user/training/weather/weather3.txthdfs

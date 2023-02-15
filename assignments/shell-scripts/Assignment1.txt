@@ -1,0 +1,49 @@
+#!/bin/sh
+echo "enter city name"
+read city1
+echo "enter the next city name"
+read city2
+echo "enter the next city name"
+read city3
+echo "enter the next city name"
+read city4
+touch cities _s.txt
+echo $city1 >> cities_s.txt
+echo $city2 >> cities_s.txt
+echo $city3 >> cities_s.txt
+echo $city4 >> cities_s.txt
+cat cities_s.txt
+sed -i 's/New/Old/gi' cities_s.txt
+cat cities_s.txt | grep "Old" > old-cities.txt
+cat old-cities.txt
+
+
+
+
+#!/bin/bash
+echo "*************************"
+echo "*   how many city you want to enter:-   *"
+echo "*************************"
+read num
+i=1
+while [ $i -le $num ];
+do 
+       echo "*********************************"
+       echo "*       enter city name         *"
+       echo "*********************************"
+       read city1
+       if [[ $city1 =- [0-9] ]];then
+              echo "*************************************************"
+              echo "*      city name contains number enter again    *"
+              echo "*************************************************"
+       else
+              echo $city1 >> cities_s.txt
+              let  i++
+       fi
+done
+echo "****************************************************"
+cat cities_s.txt
+echo "****************************************************"
+sed -i 's/New/Old/gi' cities_s.txt
+cat cities_s.txt | grep "Old" > old-cities.txt
+cat old-cities.txt
