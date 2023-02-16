@@ -1,0 +1,395 @@
+avyagowda@MILE-BL-4553-LAP:/opt/hive$ cd ~
+kavyagowda@MILE-BL-4553-LAP:~$ ls
+WordCount.py  futurense_hadoop-pyspark  hadoop-3.3.4.tar.gz  hadoop-merge.txt  hadoop.txt  hive-3.1.3.tar.gz  ratings.csv  weather.sh  weather1.txt  weather2.txt  weather3.txt
+kavyagowda@MILE-BL-4553-LAP:~$ cd futurense_hadoop-pyspark/
+kavyagowda@MILE-BL-4553-LAP:~/futurense_hadoop-pyspark$ ls
+assignments  labs  presentations  references  scripts
+kavyagowda@MILE-BL-4553-LAP:~/futurense_hadoop-pyspark$ cd assignments/
+kavyagowda@MILE-BL-4553-LAP:~/futurense_hadoop-pyspark/assignments$ ls
+git-repo-structure.txt  hadoop  shell-scripts
+kavyagowda@MILE-BL-4553-LAP:~/futurense_hadoop-pyspark/assignments$ cd  hadoop/
+kavyagowda@MILE-BL-4553-LAP:~/futurense_hadoop-pyspark/assignments/hadoop$ cd ~
+kavyagowda@MILE-BL-4553-LAP:~$ cd /mnt
+kavyagowda@MILE-BL-4553-LAP:/mnt$ cd downloads/
+-bash: cd: downloads/: No such file or directory
+kavyagowda@MILE-BL-4553-LAP:/mnt$  cd c/Users\Miles.MILE-BL-4553-LA.000/D
+-bash: cd: c/UsersMiles.MILE-BL-4553-LA.000/D: No such file or directory
+kavyagowda@MILE-BL-4553-LAP:/mnt$ cd c/Users/Miles.MILE-BL-4553-LA.000/D
+-bash: cd: c/Users/Miles.MILE-BL-4553-LA.000/D: No such file or directory
+kavyagowda@MILE-BL-4553-LAP:/mnt$  cd Miles.MILE-BL-4553-LA/
+-bash: cd: Miles.MILE-BL-4553-LA/: No such file or directory
+kavyagowda@MILE-BL-4553-LAP:/mnt$ cd ~
+kavyagowda@MILE-BL-4553-LAP:~$ cd /mnt/c/users
+kavyagowda@MILE-BL-4553-LAP:/mnt/c/users$ cd Miles.MILE-BL-4553-LA/
+kavyagowda@MILE-BL-4553-LAP:/mnt/c/users/Miles.MILE-BL-4553-LA$ ls -l
+total 6996
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:10  AppData
+lrwxrwxrwx 1 kavyagowda kavyagowda      50 Feb 16 10:10 'Application Data' -> /mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Contacts
+lrwxrwxrwx 1 kavyagowda kavyagowda      78 Feb 16 10:10  Cookies -> /mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Local/Microsoft/Windows/INetCookies
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 18:39  Desktop
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 18:47  Documents
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 18:38  Downloads
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Favorites
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Links
+lrwxrwxrwx 1 kavyagowda kavyagowda      48 Feb 16 10:10 'Local Settings' -> /mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Local
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Music
+lrwxrwxrwx 1 kavyagowda kavyagowda      44 Feb 16 10:10 'My Documents' -> /mnt/c/Users/Miles.MILE-BL-4553-LA/Documents
+-rwxrwxrwx 1 kavyagowda kavyagowda 3932160 Feb 16 10:10  NTUSER.DAT
+-rwxrwxrwx 1 kavyagowda kavyagowda   65536 Feb 16 10:10  NTUSER.DAT{e96c0bea-adb3-11ed-a798-010101010000}.TM.blf
+-rwxrwxrwx 1 kavyagowda kavyagowda  524288 Feb 16 10:10  NTUSER.DAT{e96c0bea-adb3-11ed-a798-010101010000}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 kavyagowda kavyagowda  524288 Feb 16 10:10  NTUSER.DAT{e96c0bea-adb3-11ed-a798-010101010000}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 kavyagowda kavyagowda      86 Feb 16 10:10  NetHood -> '/mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming/Microsoft/Windows/Network Shortcuts'
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Dec  6 16:06  OneDrive
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Pictures
+lrwxrwxrwx 1 kavyagowda kavyagowda      86 Feb 16 10:10  PrintHood -> '/mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'
+lrwxrwxrwx 1 kavyagowda kavyagowda      75 Feb 16 10:10  Recent -> /mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming/Microsoft/Windows/Recent
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17 'Saved Games'
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Searches
+lrwxrwxrwx 1 kavyagowda kavyagowda      75 Feb 16 10:10  SendTo -> /mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming/Microsoft/Windows/SendTo
+lrwxrwxrwx 1 kavyagowda kavyagowda      79 Feb 16 10:10 'Start Menu' -> '/mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming/Microsoft/Windows/Start Menu'
+lrwxrwxrwx 1 kavyagowda kavyagowda      78 Feb 16 10:10  Templates -> /mnt/c/Users/Miles.MILE-BL-4553-LA/AppData/Roaming/Microsoft/Windows/Templates
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 16 10:17  Videos
+drwxrwxrwx 1 kavyagowda kavyagowda     512 Feb 10 15:11  futurense-dataengg-bootcamp
+-rwxrwxrwx 1 kavyagowda kavyagowda 1101824 Feb 16 10:10  ntuser.dat.LOG1
+-rwxrwxrwx 1 kavyagowda kavyagowda 1012736 Feb 16 10:10  ntuser.dat.LOG2
+-rwxrwxrwx 1 kavyagowda kavyagowda      20 Feb 16 10:17  ntuser.ini
+kavyagowda@MILE-BL-4553-LAP:/mnt/c/users/Miles.MILE-BL-4553-LA$ cd downloads/
+kavyagowda@MILE-BL-4553-LAP:/mnt/c/users/Miles.MILE-BL-4553-LA/downloads$ ls
+'001 Views_en.srt'                                     IJRAMT_V3_I4_4.pdf                                                   'Windows - Office Plus 2019 PreActivated (1).zip'
+'001 views-demo.sql'                                   IRJMETS40700108471.pdf                                               'YESHWANTH GOWDA K S INTERNSHIP 1.pdf'
+'002 Create Table Statement_en.srt'                   'Interview Booklet_DS & JAVA.xlsx'                                    'air ticket reservation.docx'
+'004 Create Table Challenges_en (1).srt'              'Kavya B AWS Assignment.docx'                                          air.py
+'004 Create Table Challenges_en (2).srt'              'Kavya B MYSQL Q2 (1).docx'                                            bharat-software-atm-manager-report.pdf
+'004 Create Table Challenges_en.srt'                  'Kavya B MYSQL Q2.docx'                                                c.fortune_data.csv
+ 01_BigData_Hadoop.pdf                                'Kavya B MYSQL q1 (1).docx'                                            create_tables.sql
+ 02_Hive.pdf                                          'Kavya B MYSQL q1 (2).docx'                                            day-2.pdf
+ 06-01-2023-1.txt                                     'Kavya B MYSQL q1.docx'                                                desktop.ini
+ 06-01-2023-2.txt                                     'Kavya B question 2.docx'                                              fut-3.docx
+ 06-01-2023.txt                                       'Kavya B question 2.pdf'                                              'fut-4 (1).docx'
+ 10.txt                                               'Kavya B- CV.docx'                                                     fut-4.docx
+ 11.txt                                               'Kavya B.-Resume (1).pdf'                                              fut-case.docx
+ 19-12-2022-1.docx                                    'Kavya BQUESTION 1.docx'                                               fut-case.txt
+ 21-1-23-1.txt                                        'Kavya BQUESTION 1.pdf'                                                fut-insert.txt
+'21-12-2022 (1).docx'                                 'Kavya B_13.pdf'                                                      'futurense welcome kit.png'
+ 21-12-2022.docx                                      'LIBRARY CASE STUDY CODING.txt'                                        game_server.pem
+ 28-12-2022-mcq2nd.docx                                MIND-PRAC.pptx                                                        google_stock_price.csv
+ 2f83386a-0619-42f2-94f8-3e4d15bd887c.pdf              MYSQL-ADD.pptx                                                        healthcaredb_backUP.sql
+'3 new.txt'                                            MYSQL-CURSOR.pptx                                                    'hhfg-banner-2-0 (1).jpg'
+ 3.txt                                                 MYSQL-Notes.pdf                                                       hm-rev.pptx
+ 4.txt                                                'MicrosoftTeams-image (21).png'                                        hr-schema-mysql.txt
+'6 new.txt'                                            MySQLNotesForProfessionals.pdf                                        jamesbond_user.csv
+ 6.txt                                                 NbaInfo.csv                                                           ml-latest-small
+'7 new.txt'                                           'Neelesh_Rajpoot_AWS (1).docx'                                        'ml-latest-small (1)'
+ 7.txt                                                 Neelesh_Rajpoot_AWS.docx                                             'ml-latest-small (1).zip'
+ 8.txt                                                'New Doc 06-26-2022 21.04.pdf'                                         ml-latest-small.zip
+'801444 (1).docx'                                     'Normalization Exercise 2.txt'                                         movies.txt
+ 801444.docx                                          'Normalization Exercise 3.txt'                                         mysql-installer-community-8.0.31.0.msi
+ 9.txt                                                'Normalization Exercise1.txt'                                          mysql-tun-1.pptx
+ AWS+Certified+Solutions+Architect+Slides+v4.6.2.pdf   Normalization-Exercise-1.pdf                                         'new_user_credentials (1).csv'
+ AWS+Cloud+practitioner+notes.pdf                      Normalization-Exercise-2.pdf                                         'new_user_credentials (10).csv'
+'Aadhaar Card.pdf'                                     Normalization-Exercise-3.pdf                                         'new_user_credentials (11).csv'
+'AkshayBalkrishnaChattarResume (1).pdf'                NormalizationExercise_1.pdf                                          'new_user_credentials (12).csv'
+ AkshayBalkrishnaChattarResume.pdf                     Online_Flight_Booking_Management_System                              'new_user_credentials (13).csv'
+ AnyDesk.exe                                           Online_Flight_Booking_Management_System.zip                          'new_user_credentials (2).csv'
+'Arpitha 777  Futurense - CV.docx'                     Organ-Donation-and-Procurement-Network-Management-System-master      'new_user_credentials (3).csv'
+'Arpitha 777  Futurense - CV.pdf'                      Organ-Donation-and-Procurement-Network-Management-System-master.zip  'new_user_credentials (4).csv'
+'Assignment3 (1).sql'                                  PBIDesktopSetup_x64.exe                                              'new_user_credentials (5).csv'
+ Assignment3.sql                                      'Project Template (1).pptx'                                           'new_user_credentials (6).csv'
+ BATejaswiniiResume.docx                              'Project Template (2).pptx'                                           'new_user_credentials (7).csv'
+'Banking management.docx'                             'Project Template.pptx'                                               'new_user_credentials (8).csv'
+ Bike-Rental-PHP-master                               'Python Project - Healthcare Census'                                  'new_user_credentials (9).csv'
+ Bike-Rental-PHP-master.zip                           'Python Project - Healthcare Census.zip'                               new_user_credentials.csv
+ Car_Rental_Portal-master                              Python-3.pdf                                                          online
+ Car_Rental_Portal-master.zip                         'QUESTION 1.docx'                                                      online.zip
+'Cervello interview.txt'                               Release                                                               p2.pbix
+ Chicago_city.csv                                      Release.zip                                                           pb.pbix
+'Copy of BigmacBurger_data2.csv'                      'Restaurant - Customers.csv'                                           pgadmin4-6.18-x64.exe
+'Copy of Data - Multiple Worksheets.xlsx'             'Restaurant - Foods.csv'                                               pokemon_data.csv
+'Copy of Data - Single Worksheet.xlsx'                'Restaurant - Week 1 Sales.csv'                                       'postgresql-14.6-2-windows-x64 (1).exe'
+'Copy of SWOT Analysis Infographics by Slidesgo.pdf'  'Restaurant - Week 2 Sales.csv'                                        powe1.pbix
+'DDL Alter Drop Exercise.txt'                         'SQL Project - Healthcare'                                             python-3.10.4-amd64.exe
+'DDL Table Creation Exercise.txt'                     'SQL Project - Healthcare.zip'                                         q1.txt
+ DDL-Alter-Drop-Exercise.pdf                           SQL-Daily_Task-Day_1-Environment_Setup.docx                           q2.txt
+'DDL_Table_Creation_Exercise (1).pdf'                 'Sample - Superstore -Final.xlsx'                                      railreservation.py
+ DDL_Table_Creation_Exercise.pdf                      'Screenshot 2021-05-02 152754.jpg'                                     railway_PROJECT.doc
+'DML Insert Update Delete Exercises.txt'               SpotifySetup.exe                                                      ratings.csv
+ DML-Insert-Update-Delete-Exercises.pdf               'Sql Notes.pdf'                                                        revenue.csv
+'DQL-Select-Exercise (1).md'                          'Tax Information management System project report.doc'                 server0.pem
+'DQL-Select-Exercise (2).md'                          'Unconfirmed 106309.crdownload'                                        server1.pem
+'DQL-Select-Exercise (3).md'                           VSCodeUserSetup-x64-1.74.3.exe                                        server12.pem
+'DQL-Select-Exercise+(1).md'                          'Web ppt.pptx'                                                         server123.pem
+'DQL-Select-Exercise-Database (1).sql'                'WhatsApp Image 2022-12-11 at 12.55.19 PM.jpeg'                        server1234.pem
+'DQL-Select-Exercise-Database (2).sql'                'WhatsApp Image 2022-12-11 at 12.55.34 PM.jpeg'                        sql-hr.pptx
+ DQL-Select-Exercise-Database.sql                     'WhatsApp Image 2022-12-12 at 10.05.19 PM.jpeg'                       'toggle off.png'
+ DQL-Select-Exercise.md                               'WhatsApp Image 2022-12-12 at 10.11.00 PM.jpeg'                       'toggle on.png'
+ DRAFT.pdf                                            'WhatsApp Image 2022-12-13 at 10.05.05 AM.jpeg'                        trigger-demo.pptx
+'Degree Certificate(3).pdf'                           'WhatsApp Image 2022-12-21 at 1.54.33 PM.jpeg'                         userfoods.csv
+ EmployeesInfo.csv                                    'WhatsApp Image 2022-12-27 at 4.38.18 PM.jpeg'                         viv-tables-MARIA.txt
+ FF15-Kavya_B-Freshers-SWOT_Analysis.pdf              'WhatsApp Image 2022-12-27 at 4.54.19 PM.jpeg'                        'web final.docx'
+'FF15_DE Curriculum.xlsx'                             'WhatsApp Image 2023-01-11 at 4.31.52 PM.jpeg'                        'weekend -7.txt'
+'Futurense LMS Manual_Student Login.pdf'              'WhatsApp Image 2023-01-26 at 1.33.19 PM.jpeg'                         wsl_update_x64.msi
+ Git-2.39.1-64-bit.exe                                'WhatsApp Image 2023-01-26 at 1.33.36 PM.jpeg'                         xampp-windows-x64-7.4.33-0-VC15-installer.exe
+'IJRAMT_V3_I4_4 (1).pdf'                              'Windows - Office Plus 2019 PreActivated (1)'
+kavyagowda@MILE-BL-4553-LAP:/mnt/c/users/Miles.MILE-BL-4553-LA/downloads$ cd ~
+kavyagowda@MILE-BL-4553-LAP:~$ beeline
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Beeline version 3.1.3 by Apache Hive
+beeline> !connect jdbc:hive2:// username password org.apache.hive.jdbc.HiveDriver
+Connecting to jdbc:hive2://
+Hive Session ID = eded8ed8-3503-41fa-bddf-80811973c912
+23/02/16 19:33:13 [main]: WARN session.SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+23/02/16 19:33:13 [main]: WARN metastore.ObjectStore: datanucleus.autoStartMechanismMode is set to unsupported value null . Setting it to value: ignored
+23/02/16 19:33:13 [main]: WARN util.DriverDataSource: Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+23/02/16 19:33:13 [main]: WARN util.DriverDataSource: Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+23/02/16 19:33:14 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:14 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:14 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:14 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:14 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:14 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:15 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:15 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:15 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:15 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:15 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+23/02/16 19:33:15 [main]: WARN DataNucleus.MetaData: Metadata has jdbc-type of null yet this is not valid. Ignored
+Connected to: Apache Hive (version 3.1.3)
+Driver: Hive JDBC (version 3.1.3)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://> use hive_tarining;
+23/02/16 19:33:35 [7f2a2f93-802a-4e27-be1f-76a49f158f5f main]: WARN metastore.ObjectStore: Failed to get database hive.hive_tarining, returning NoSuchObjectException
+FAILED: SemanticException [Error 10072]: Database does not exist: hive_tarining
+23/02/16 19:33:35 [7f2a2f93-802a-4e27-be1f-76a49f158f5f main]: ERROR ql.Driver: FAILED: SemanticException [Error 10072]: Database does not exist: hive_tarining
+org.apache.hadoop.hive.ql.parse.SemanticException: Database does not exist: hive_tarining
+        at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getDatabase(BaseSemanticAnalyzer.java:2171)
+        at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeSwitchDatabase(DDLSemanticAnalyzer.java:1413)
+        at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:516)
+        at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:285)
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:659)
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1826)
+        at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1773)
+        at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1768)
+        at org.apache.hadoop.hive.ql.reexec.ReExecDriver.compileAndRespond(ReExecDriver.java:126)
+        at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:197)
+        at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:260)
+        at org.apache.hive.service.cli.operation.Operation.run(Operation.java:247)
+        at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:541)
+        at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementAsync(HiveSessionImpl.java:527)
+        at org.apache.hive.service.cli.CLIService.executeStatementAsync(CLIService.java:312)
+        at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:562)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.hive.jdbc.HiveConnection$SynchronizedHandler.invoke(HiveConnection.java:1585)
+        at com.sun.proxy.$Proxy40.ExecuteStatement(Unknown Source)
+        at org.apache.hive.jdbc.HiveStatement.runAsyncOnServer(HiveStatement.java:323)
+        at org.apache.hive.jdbc.HiveStatement.execute(HiveStatement.java:265)
+        at org.apache.hive.beeline.Commands.executeInternal(Commands.java:1005)
+        at org.apache.hive.beeline.Commands.execute(Commands.java:1201)
+        at org.apache.hive.beeline.Commands.sql(Commands.java:1130)
+        at org.apache.hive.beeline.BeeLine.dispatch(BeeLine.java:1425)
+        at org.apache.hive.beeline.BeeLine.execute(BeeLine.java:1287)
+        at org.apache.hive.beeline.BeeLine.begin(BeeLine.java:1071)
+        at org.apache.hive.beeline.BeeLine.mainWithInputRedirection(BeeLine.java:538)
+        at org.apache.hive.beeline.BeeLine.main(BeeLine.java:520)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+
+23/02/16 19:33:35 [main]: WARN thrift.ThriftCLIService: Error executing statement:
+org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10072]: Database does not exist: hive_tarining
+        at org.apache.hive.service.cli.operation.Operation.toSQLException(Operation.java:335) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:199) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:260) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.operation.Operation.run(Operation.java:247) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:541) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementAsync(HiveSessionImpl.java:527) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.CLIService.executeStatementAsync(CLIService.java:312) ~[hive-service-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:562) [hive-service-3.1.3.jar:3.1.3]
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+        at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+        at org.apache.hive.jdbc.HiveConnection$SynchronizedHandler.invoke(HiveConnection.java:1585) [hive-jdbc-3.1.3.jar:3.1.3]
+        at com.sun.proxy.$Proxy40.ExecuteStatement(Unknown Source) [?:?]
+        at org.apache.hive.jdbc.HiveStatement.runAsyncOnServer(HiveStatement.java:323) [hive-jdbc-3.1.3.jar:3.1.3]
+        at org.apache.hive.jdbc.HiveStatement.execute(HiveStatement.java:265) [hive-jdbc-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.Commands.executeInternal(Commands.java:1005) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.Commands.execute(Commands.java:1201) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.Commands.sql(Commands.java:1130) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.BeeLine.dispatch(BeeLine.java:1425) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.BeeLine.execute(BeeLine.java:1287) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.BeeLine.begin(BeeLine.java:1071) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.BeeLine.mainWithInputRedirection(BeeLine.java:538) [hive-beeline-3.1.3.jar:3.1.3]
+        at org.apache.hive.beeline.BeeLine.main(BeeLine.java:520) [hive-beeline-3.1.3.jar:3.1.3]
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+        at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:323) [hadoop-common-3.3.4.jar:?]
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:236) [hadoop-common-3.3.4.jar:?]
+Caused by: org.apache.hadoop.hive.ql.parse.SemanticException: Database does not exist: hive_tarining
+        at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getDatabase(BaseSemanticAnalyzer.java:2171) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeSwitchDatabase(DDLSemanticAnalyzer.java:1413) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:516) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:285) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:659) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1826) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1773) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1768) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hadoop.hive.ql.reexec.ReExecDriver.compileAndRespond(ReExecDriver.java:126) ~[hive-exec-3.1.3.jar:3.1.3]
+        at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:197) ~[hive-service-3.1.3.jar:3.1.3]
+        ... 28 more
+Error: Error while compiling statement: FAILED: SemanticException [Error 10072]: Database does not exist: hive_tarining (state=42000,code=10072)
+0: jdbc:hive2://> use hive_training;
+OK
+No rows affected (0.149 seconds)
+0: jdbc:hive2://> create table rating(userid int, movieid int, rating varchar(20), t string)
+. . . . . . . . > comment "Ratings details"
+. . . . . . . . > ROW FORMAT DELIMITED
+. . . . . . . . > FIELDS TERMINATED BY ","
+. . . . . . . . > LINES TERMINATED BY "\n"
+. . . . . . . . > STORED AS TEXTFILE;
+OK
+No rows affected (0.596 seconds)
+0: jdbc:hive2://> SHOW tables;
+OK
++-----------+
+| tab_name  |
++-----------+
+| employee  |
+| rating    |
++-----------+
+2 rows selected (0.182 seconds)
+0: jdbc:hive2://> LOAD DATA LOCAL INPATH '/mnt/c/Users/Miles.MILE-BL-4553-LA/downloads/ratings.csv' overwrite into table rating;
+23/02/16 19:38:53 [HiveServer2-Background-Pool: Thread-64]: WARN metastore.ObjectStore: datanucleus.autoStartMechanismMode is set to unsupported value null . Setting it to value: ignored
+Loading data to table hive_training.rating
+23/02/16 19:38:54 [HiveServer2-Background-Pool: Thread-64]: WARN metastore.ObjectStore: datanucleus.autoStartMechanismMode is set to unsupported value null . Setting it to value: ignored
+OK
+No rows affected (0.908 seconds)
+0: jdbc:hive2://> select count(*) from rating;
+23/02/16 19:39:20 [7f2a2f93-802a-4e27-be1f-76a49f158f5f main]: WARN metastore.ObjectStore: datanucleus.autoStartMechanismMode is set to unsupported value null . Setting it to value: ignored
+23/02/16 19:39:22 [HiveServer2-Background-Pool: Thread-74]: WARN ql.Driver: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = kavyagowda_20230216193920_bf547444-ede2-4b5f-b689-5f89181fa50e
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+23/02/16 19:39:22 [HiveServer2-Background-Pool: Thread-74]: WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+Starting Job = job_1676532020904_0006, Tracking URL = http://MILE-BL-4553-LAP.localdomain:8088/proxy/application_1676532020904_0006/
+Kill Command = /opt/hadoop/bin/mapred job  -kill job_1676532020904_0006
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+23/02/16 19:39:29 [HiveServer2-Background-Pool: Thread-74]: WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2023-02-16 19:39:29,117 Stage-1 map = 0%,  reduce = 0%
+2023-02-16 19:39:34,320 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.56 sec
+2023-02-16 19:39:38,453 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.96 sec
+MapReduce Total cumulative CPU time: 4 seconds 960 msec
+Ended Job = job_1676532020904_0006
+MapReduce Jobs Launched:
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 4.96 sec   HDFS Read: 2496651 HDFS Write: 106 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 960 msec
+OK
++---------+
+|   _c0   |
++---------+
+| 100837  |
++---------+
+1 row selected (18.972 seconds)
+0: jdbc:hive2://> select rating, count(rating) from rating where rating="rating" group by rating;
+23/02/16 19:40:30 [HiveServer2-Background-Pool: Thread-95]: WARN ql.Driver: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = kavyagowda_20230216194030_a064b433-9145-44ba-9a76-b06595ef3270
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+23/02/16 19:40:31 [HiveServer2-Background-Pool: Thread-95]: WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+Starting Job = job_1676532020904_0007, Tracking URL = http://MILE-BL-4553-LAP.localdomain:8088/proxy/application_1676532020904_0007/
+Kill Command = /opt/hadoop/bin/mapred job  -kill job_1676532020904_0007
+WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+23/02/16 19:40:36 [HiveServer2-Background-Pool: Thread-95]: WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2023-02-16 19:40:36,431 Stage-1 map = 0%,  reduce = 0%
+2023-02-16 19:40:41,588 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.63 sec
+2023-02-16 19:40:45,708 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.22 sec
+MapReduce Total cumulative CPU time: 6 seconds 220 msec
+Ended Job = job_1676532020904_0007
+MapReduce Jobs Launched:
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 6.22 sec   HDFS Read: 2499725 HDFS Write: 108 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 220 msec
+OK
++---------+------+
+| rating  | _c1  |
++---------+------+
+| rating  | 1    |
++---------+------+
+1 row selected (17.14 seconds)
+0: jdbc:hive2://> select rating, count(rating) from rating where rating<>"rating" group by rating;
+23/02/16 19:41:09 [HiveServer2-Background-Pool: Thread-116]: WARN ql.Driver: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Query ID = kavyagowda_20230216194109_25ce9a4c-a669-4af3-923d-2db72ae587e9
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+23/02/16 19:41:09 [HiveServer2-Background-Pool: Thread-116]: WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+Starting Job = job_1676532020904_0008, Tracking URL = http://MILE-BL-4553-LAP.localdomain:8088/proxy/application_1676532020904_0008/
+Kill Command = /opt/hadoop/bin/mapred job  -kill job_1676532020904_0008
+WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+23/02/16 19:41:14 [HiveServer2-Background-Pool: Thread-116]: WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2023-02-16 19:41:14,754 Stage-1 map = 0%,  reduce = 0%
+2023-02-16 19:41:19,913 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.95 sec
+2023-02-16 19:41:25,067 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.46 sec
+MapReduce Total cumulative CPU time: 6 seconds 460 msec
+Ended Job = job_1676532020904_0008
+MapReduce Jobs Launched:
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 6.46 sec   HDFS Read: 2498521 HDFS Write: 301 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 460 msec
+OK
++---------+--------+
+| rating  |  _c1   |
++---------+--------+
+| 0.5     | 1370   |
+| 1.0     | 2811   |
+| 1.5     | 1791   |
+| 2.0     | 7551   |
+| 2.5     | 5550   |
+| 3.0     | 20047  |
+| 3.5     | 13136  |
+| 4.0     | 26818  |
+| 4.5     | 8551   |
+| 5.0     | 13211  |
++---------+--------+
+10 rows selected (17.025 seconds)
+0: jdbc:hive2://>
+
+
+
+
+
+
+
