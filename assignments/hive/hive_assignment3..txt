@@ -1,0 +1,179 @@
+
+#Creating a table for customers.
+
+
+ create table Customers(cust_id int, last_name string, first_name string, age int, profession string)
+. . . . . . . . > comment "customers details"
+. . . . . . . . > ROW FORMAT DELIMITED
+. . . . . . . . > FIELDS TERMINATED BY ","
+. . . . . . . . > LINES TERMINATED BY "\n"
+. . . . . . . . > STORED AS TEXTFILE;
+
+
+LOAD DATA LOCAL INPATH '/home/kavyagowda/futurense_hadoop-pyspark/labs/dataset/retail/customers.txt' OVERWRITE INTO TABLE CUSTOMERS;
+
+
+#Creating a table for transactions.
+
+
+create table Transactions(trans_id int, trans_date date, cust_id int, amount double, category string, desc string, city string, state string, pymt_mode string)
+. . . . . . . . > comment "transaction details"
+. . . . . . . . > ROW FORMAT DELIMITED
+. . . . . . . . > FIELDS TERMINATED BY ","
+. . . . . . . . > LINES TERMINATED BY "\n"
+. . . . . . . . > STORED AS TEXTFILE;
+
+
+
+LOAD DATA LOCAL INPATH '/home/kavyagowda/futurense_hadoop-pyspark/labs/dataset/retail/transactions.txt' OVERWRITE INTO TABLE TRANSACTIONS;
+
+
+1. No. of transactions by customer
+
+   select c.cust_id,count(t.trans_id) 
+   from customers c join transactions t 
+   on c.cust_id=t.cust_id 
+   group by c.cust_id;
+   
+   
++------------+------+
+| c.cust_id  | _c1  |
++------------+------+
+| 4000001    | 8    |
+| 4000002    | 6    |
+| 4000003    | 3    |
+| 4000004    | 5    |
+| 4000005    | 5    |
+| 4000006    | 5    |
+| 4000007    | 6    |
+| 4000008    | 10   |
+| 4000009    | 6    |
+| 4000010    | 6    |
++------------+------+
+
+
+
+
+2. Total transaction amount by customer
+
+   select c.cust_id,sum(t.amount) 
+   from customers c join transactions t
+   on c.cust_id=t.cust_id 
+   group by c.cust_id;
+
+
++------------+---------------------+
+| c.cust_id  |         _c1         |
++------------+---------------------+
+| 4000001    | 651.05              |
+| 4000002    | 706.97              |
+| 4000003    | 527.5899999999999   |
+| 4000004    | 337.06              |
+| 4000005    | 325.15              |
+| 4000006    | 539.38              |
+| 4000007    | 699.5500000000001   |
+| 4000008    | 859.42              |
+| 4000009    | 457.83              |
+| 4000010    | 447.09000000000003  |
++------------+---------------------+
+
+
+
+3. Get top 3 customers by transaction amount
+
+    select c.cust_id,t.amount 
+    from transactions t join customers c 
+    on c.cust_id=t.cust_id 
+    order by t.amount desc limit 3;
+
+ ------------+-----------+
+| c.cust_id  | t.amount  |
++------------+-----------+
+| 4000002    | 198.44    |
+| 4000003    | 198.19    |
+| 4000002    | 194.86    |
++------------+-----------+
+
+
+
+4. No of transactions by customer and mode of payment
+
+  select c.cust_id,count(t.trans_id),t.pymt_mode 
+  from customers c join transactions t 
+  on c.cust_id=t.cust_id 
+  group by c.cust_id,t.pymt_mode;
+
++------------+------+--------------+
+| c.cust_id  | _c1  | t.pymt_mode  |
++------------+------+--------------+
+| 4000001    | 1    | cash         |
+| 4000001    | 7    | credit       |
+| 4000002    | 1    | cash         |
+| 4000002    | 5    | credit       |
+| 4000003    | 3    | credit       |
+| 4000004    | 4    | cash         |
+| 4000004    | 1    | credit       |
+| 4000005    | 1    | cash         |
+| 4000005    | 4    | credit       |
+| 4000006    | 5    | credit       |
+| 4000007    | 6    | credit       |
+| 4000008    | 10   | credit       |
+| 4000009    | 6    | credit       |
+| 4000010    | 6    | credit       |
++------------+------+--------------+
+
+
+
+
+
+5.Get top 3 cities which has more transactions
+
+   select city,count(trans_id) 
+   from transactions 
+   group by city 
+   order by count(trans_id) desc limit 3;
+   
+   
++-------------+------+
+|    city     | _c1  |
++-------------+------+
+| Honolulu    | 3    |
+| Columbus    | 3    |
+| Everett     | 2    |
++-------------+------+
+
+
+
+
+
+6. Get month wise highest transaction
+
+   select month,count(month) 
+  from (select substr(trans_date,1,2) as month from transactions)x 
+  group by month order by count(month) desc;
+
+
+
+
+
++--------+------+
+| month  | _c1  |
++--------+------+
+| 10     | 10   |
+| 06     | 10   |
+| 05     | 8    |
+| 02     | 6    |
+| 11     | 5    |
+| 12     | 4    |
+| 09     | 4    |
+| 04     | 4    |
+| 03     | 3    |
+| 08     | 2    |
+| 07     | 2    |
+| 01     | 2    |
++--------+------+
+
+
+
+
+
