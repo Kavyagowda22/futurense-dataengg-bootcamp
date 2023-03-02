@@ -1,0 +1,390 @@
+#creating a BankMarket table
+
+create table BankMarket(age int,job string,marital string,education string,default string,balance int,housing string,loan string,contact string,day int,month string,duration int,campaign int,pdays int,previous int,poutcome string,y string)
+. . . . . . . . > comment "Bank details"
+. . . . . . . . >  ROW FORMAT DELIMITED
+. . . . . . . . >  FIELDS TERMINATED BY ";"
+. . . . . . . . > LINES TERMINATED BY "\n"
+. . . . . . . . > stored as textfile;
+
+
+#Loading a data
+
+
+0: jdbc:hive2://> load data local inpath '/home/kavyagowda/futurense_hadoop-pyspark/labs/dataset/bankmarket/bankmarketdata.csv' overwrite into table BankMarket;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Give marketing success rate. (No. of people subscribed / total no. of entries)
+
+
+  select(select count(y) from bankmarket
+  WHERE y="\"yes\"")/count(*) from BankMarket;
+ 
+
++----------------------+
+|         _c0          |
++----------------------+
+| 0.11698221711050164  |
++----------------------+
+   
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Give marketing failure rate
+
+
+ select(select count(y) from bankmarket
+ WHERE y="\"no\"")/count(*) from BankMarket;
+ 
+
++---------------------+
+|         _c0         |
++---------------------+
+| 0.8829956648677342  |
++---------------------+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.Maximum, Mean, and Minimum age of the average targeted customer
+
+  select max(age), min(age), avg(age)
+  from bankmarket;
+
++------+------+--------------------+
+| _c0  | _c1  |        _c2         |
++------+------+--------------------+
+| 95   | 18   | 40.93621021432837  |
++------+------+--------------------+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.Check the quality of customers by checking the average balance, median balance of customers
+
+
+  select avg(balance) as avg_balance,percentile(cast(balance as bigint),0.5) as median_balance
+  from bankmarket; 
+
++---------------------+-----------------+
+|     avg_balance     | median_balance  |
++---------------------+-----------------+
+| 1362.2720576850766  | 448.0           |
++---------------------+-----------------+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.Check if age matters in marketing subscription for deposit
+
+select age, count(age) as number
+from  bankmarket where y= "\"yes\""
+group by age order by number desc;
+
++------+---------+
+| age  | number  |
++------+---------+
+| 32   | 221     |
+| 30   | 217     |
+| 33   | 210     |
+| 35   | 209     |
+| 31   | 206     |
+| 34   | 198     |
+| 36   | 195     |
+| 29   | 171     |
+| 37   | 170     |
+| 28   | 162     |
+| 38   | 144     |
+| 39   | 143     |
+| 27   | 141     |
+| 26   | 134     |
+| 41   | 120     |
+| 46   | 118     |
+| 40   | 116     |
+| 25   | 113     |
+| 47   | 113     |
+| 42   | 111     |
+| 45   | 106     |
+| 43   | 103     |
+| 49   | 101     |
+| 60   | 98      |
+| 44   | 93      |
+| 59   | 88      |
+| 52   | 85      |
+| 53   | 85      |
+| 54   | 84      |
+| 48   | 82      |
+| 57   | 78      |
+| 51   | 77      |
+| 55   | 76      |
+| 50   | 72      |
+| 58   | 72      |
+| 56   | 68      |
+| 24   | 68      |
+| 61   | 57      |
+| 23   | 44      |
+| 22   | 40      |
+| 62   | 39      |
+| 64   | 35      |
+| 63   | 30      |
+| 71   | 25      |
+| 73   | 24      |
+| 72   | 24      |
+| 66   | 24      |
+| 67   | 23      |
+| 21   | 22      |
+| 77   | 22      |
+| 65   | 21      |
+| 68   | 21      |
+| 70   | 17      |
+| 69   | 17      |
+| 76   | 16      |
+| 75   | 15      |
+| 20   | 15      |
+| 78   | 14      |
+| 74   | 13      |
+| 80   | 12      |
+| 19   | 11      |
+| 79   | 10      |
+| 82   | 8       |
+| 18   | 7       |
+| 81   | 6       |
+| 83   | 6       |
+| 84   | 5       |
+| 85   | 4       |
+| 86   | 4       |
+| 87   | 3       |
+| 90   | 2       |
+| 92   | 2       |
+| 93   | 2       |
+| 95   | 1       |
++------+---------+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+7.Check if  marital status mattered for subscription to deposit.
+
+
+select marital, count(marital) as number
+from  bankmarket where y="\"yes\""
+group by marital order by number desc;
+
+
++-------------+---------+
+|   marital   | number  |
++-------------+---------+
+| "married"   | 2755    |
+| "single"    | 1912    |
+| "divorced"  | 622     |
++-------------+---------+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8.Check if age and marital status together mattered for subscription to deposit scheme
+ 
+select age, marital, count(marital)
+from  bankmarket where y= "\"yes\""
+group by age, marital order by count(marital) desc;
+
+
++------+-------------+------+
+| age  |   marital   | _c2  |
++------+-------------+------+
+| 30   | "single"    | 151  |
+| 28   | "single"    | 138  |
+| 29   | "single"    | 133  |
+| 32   | "single"    | 124  |
+| 26   | "single"    | 121  |
+| 34   | "married"   | 118  |
+| 31   | "single"    | 111  |
+| 27   | "single"    | 110  |
+| 35   | "married"   | 101  |
+| 36   | "married"   | 100  |
+| 25   | "single"    | 99   |
+| 37   | "married"   | 98   |
+| 33   | "single"    | 97   |
+| 33   | "married"   | 97   |
+| 32   | "married"   | 87   |
+| 39   | "married"   | 87   |
+| 38   | "married"   | 86   |
+| 35   | "single"    | 84   |
+| 47   | "married"   | 83   |
+| 46   | "married"   | 80   |
+| 31   | "married"   | 80   |
+| 60   | "married"   | 73   |
+| 40   | "married"   | 73   |
+| 41   | "married"   | 72   |
+| 36   | "single"    | 71   |
+| 49   | "married"   | 71   |
+| 42   | "married"   | 70   |
+| 34   | "single"    | 69   |
+| 45   | "married"   | 68   |
+| 52   | "married"   | 67   |
+| 59   | "married"   | 66   |
+| 43   | "married"   | 62   |
+| 53   | "married"   | 60   |
+| 51   | "married"   | 59   |
+| 30   | "married"   | 59   |
+| 57   | "married"   | 58   |
+| 24   | "single"    | 58   |
+| 37   | "single"    | 57   |
+| 50   | "married"   | 57   |
+| 58   | "married"   | 54   |
+| 54   | "married"   | 52   |
+| 48   | "married"   | 51   |
+| 55   | "married"   | 50   |
+| 56   | "married"   | 49   |
+| 44   | "married"   | 48   |
+| 61   | "married"   | 47   |
+| 23   | "single"    | 42   |
+| 22   | "single"    | 40   |
+| 39   | "single"    | 40   |
+| 38   | "single"    | 38   |
+| 62   | "married"   | 34   |
+| 29   | "married"   | 33   |
+| 41   | "single"    | 31   |
+| 40   | "single"    | 31   |
+| 64   | "married"   | 31   |
+| 27   | "married"   | 29   |
+| 43   | "single"    | 26   |
+| 55   | "divorced"  | 26   |
+| 46   | "divorced"  | 25   |
+| 63   | "married"   | 25   |
+| 36   | "divorced"  | 24   |
+| 35   | "divorced"  | 24   |
+| 54   | "divorced"  | 24   |
+| 44   | "single"    | 24   |
+| 45   | "divorced"  | 24   |
+| 72   | "married"   | 23   |
+| 42   | "single"    | 22   |
+| 66   | "married"   | 22   |
+| 21   | "single"    | 21   |
+| 60   | "divorced"  | 21   |
+| 44   | "divorced"  | 21   |
+| 47   | "single"    | 20   |
+| 38   | "divorced"  | 20   |
+| 28   | "married"   | 20   |
+| 42   | "divorced"  | 19   |
+| 73   | "married"   | 19   |
+| 77   | "married"   | 19   |
+| 65   | "married"   | 19   |
+| 53   | "divorced"  | 18   |
+| 41   | "divorced"  | 17   |
+| 71   | "married"   | 17   |
+| 58   | "divorced"  | 17   |
+| 39   | "divorced"  | 16   |
+| 49   | "divorced"  | 16   |
+| 48   | "divorced"  | 16   |
+| 59   | "divorced"  | 16   |
+| 33   | "divorced"  | 16   |
+| 37   | "divorced"  | 15   |
+| 57   | "divorced"  | 15   |
+| 43   | "divorced"  | 15   |
+| 67   | "married"   | 15   |
+| 48   | "single"    | 15   |
+| 31   | "divorced"  | 15   |
+| 49   | "single"    | 14   |
+| 45   | "single"    | 14   |
+| 20   | "single"    | 14   |
+| 25   | "married"   | 14   |
+| 26   | "married"   | 13   |
+| 46   | "single"    | 13   |
+| 68   | "married"   | 13   |
++------+-------------+------+
+| age  |   marital   | _c2  |
++------+-------------+------+
+| 69   | "married"   | 13   |
+| 56   | "divorced"  | 13   |
+| 75   | "married"   | 12   |
+| 70   | "married"   | 12   |
+| 40   | "divorced"  | 12   |
+| 19   | "single"    | 11   |
+| 34   | "divorced"  | 11   |
+| 74   | "married"   | 11   |
+| 80   | "married"   | 11   |
+| 50   | "divorced"  | 11   |
+| 24   | "married"   | 10   |
+| 32   | "divorced"  | 10   |
+| 76   | "married"   | 10   |
+| 52   | "divorced"  | 10   |
+| 51   | "divorced"  | 10   |
+| 47   | "divorced"  | 10   |
+| 61   | "divorced"  | 9    |
+| 52   | "single"    | 8    |
+| 51   | "single"    | 8    |
+| 79   | "married"   | 8    |
+| 54   | "single"    | 8    |
+| 71   | "divorced"  | 8    |
+| 78   | "married"   | 8    |
+| 18   | "single"    | 7    |
+| 67   | "divorced"  | 7    |
+| 53   | "single"    | 7    |
+| 30   | "divorced"  | 7    |
+| 78   | "divorced"  | 6    |
+| 76   | "divorced"  | 6    |
+| 68   | "divorced"  | 6    |
+| 56   | "single"    | 6    |
+| 59   | "single"    | 6    |
+| 70   | "divorced"  | 5    |
+| 57   | "single"    | 5    |
+| 82   | "married"   | 5    |
+| 62   | "divorced"  | 5    |
+| 29   | "divorced"  | 5    |
+| 50   | "single"    | 4    |
+| 60   | "single"    | 4    |
+| 63   | "divorced"  | 4    |
+| 64   | "divorced"  | 4    |
+| 73   | "divorced"  | 4    |
+| 81   | "married"   | 4    |
+| 28   | "divorced"  | 4    |
+| 84   | "married"   | 4    |
+| 85   | "married"   | 3    |
+| 75   | "divorced"  | 3    |
+| 69   | "divorced"  | 3    |
+| 77   | "divorced"  | 3    |
+| 82   | "divorced"  | 3    |
+| 83   | "married"   | 3    |
+| 79   | "divorced"  | 2    |
+| 27   | "divorced"  | 2    |
+| 92   | "married"   | 2    |
+| 81   | "divorced"  | 2    |
+| 74   | "divorced"  | 2    |
+| 86   | "married"   | 2    |
+| 23   | "married"   | 2    |
+| 87   | "married"   | 2    |
+| 90   | "divorced"  | 2    |
+| 66   | "divorced"  | 2    |
+| 68   | "single"    | 2    |
+| 83   | "divorced"  | 2    |
+| 93   | "married"   | 2    |
+| 65   | "divorced"  | 2    |
+| 72   | "divorced"  | 1    |
+| 73   | "single"    | 1    |
+| 63   | "single"    | 1    |
+| 20   | "married"   | 1    |
+| 95   | "divorced"  | 1    |
+| 61   | "single"    | 1    |
+| 58   | "single"    | 1    |
+| 83   | "single"    | 1    |
+| 84   | "divorced"  | 1    |
+| 80   | "divorced"  | 1    |
+| 85   | "divorced"  | 1    |
+| 86   | "divorced"  | 1    |
+| 86   | "single"    | 1    |
+| 87   | "divorced"  | 1    |
+| 21   | "married"   | 1    |
+| 69   | "single"    | 1    |
+| 67   | "single"    | 1    |
++------+-------------+------+
