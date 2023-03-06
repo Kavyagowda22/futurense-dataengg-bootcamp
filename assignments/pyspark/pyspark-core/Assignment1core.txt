@@ -1,0 +1,80 @@
+
+	Load the data from "C:/Users/miles.MILE-BL-4409-LA/Downloads/modify1_weather.txt" and created an RDD
+--------------------------------------------------------------------------------------------------------------
+
+rdd1=sc.textFile("C:/Users/miles.MILE-BL-4409-LA/Downloads/modify1_weather.txt")
+
+type(rdd1)
+
+ o/p:
+-------
+pyspark.rdd.RDD
+
+
+	Display the weather data:
+---------------------------------------
+rdd1.collect()
+
+
+	Display Max, Min weather:
+---------------------------------------
+
+
+rdd2=rdd1.map(lambda a:a.split(","))
+
+rdd3=rdd2.map(lambda x:float(x[5]))
+
+rdd3.max()
+
+ o/p:
+-------
+36.0
+
+rdd4=rdd2.map(lambda b:float(b[6]))
+
+rdd4.min()
+
+ o/p:
+------
+-7.9
+
+	Display month wise Max and Min weather:
+--------------------------------------------------
+
+rdd5=rdd2.map(lambda c:(c[1][5:7],float(c[5])))
+
+rdd6=rdd5.groupByKey().mapValues(list)
+
+rdd7.collect()
+
+ o/p:
+--------
+
+[('01', 26.5),
+ ('02', 26.6),
+ ('03', 29.1),
+ ('0-', 13.7),
+ ('04', 30.8),
+ ('05', 31.1),
+ ('06', 33.6),                                                                            
+ ('07', 36.0)]
+
+rdd8=rdd2.map(lambda c:(c[1][5:7],float(c[6])))
+
+rdd9=rdd8.groupByKey().mapValues(list)
+
+rdd10=rdd9.map(lambda e:(e[0],min(e[1])))
+
+rdd10.collect()
+
+ o/p:
+--------
+
+[('01', -7.9),
+ ('02', -3.5),
+ ('03', -3.2),
+ ('0-', 4.4),
+ ('04', 8.0),
+ ('05', 14.3),
+ ('06', 0.0),
+ ('07', 19.8)]
